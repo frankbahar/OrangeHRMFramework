@@ -1,0 +1,16 @@
+com\Orangehrm\utils\ConfigsReader.class
+com\Orangehrm\steps\GoogleSearchSteps.class
+com\Orangehrm\steps\LoginSteps.class
+com\Orangehrm\steps\AddLocationSteps.class
+com\Orangehrm\utils\BaseClass.class
+com\Orangehrm\pages\AddEmployee.class
+com\Orangehrm\pages\AddLocation.class
+com\Orangehrm\steps\AddEmployeeSteps.class
+com\Orangehrm\steps\Hooks.class
+com\Orangehrm\pages\LoginPage.class
+com\Orangehrm\utils\Constants.class
+com\Orangehrm\runners\TestRunner.class
+com\Orangehrm\pages\LoginPageWithoutFactory.class
+com\Orangehrm\pages\HomePage.class
+com\Orangehrm\utils\ExcelUtility.class
+com\Orangehrm\utils\CommonMethods.class
