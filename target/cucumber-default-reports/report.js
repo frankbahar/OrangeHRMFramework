@@ -100,10 +100,8 @@ formatter.match({
   "location": "AddEmployeeSteps.i_see_employee_is_added_successfuly()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: Values should be different. Actual: 0\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.failEquals(Assert.java:185)\r\n\tat org.junit.Assert.assertNotEquals(Assert.java:199)\r\n\tat org.junit.Assert.assertNotEquals(Assert.java:211)\r\n\tat com.Orangehrm.steps.AddEmployeeSteps.i_see_employee_is_added_successfuly(AddEmployeeSteps.java:80)\r\n\tat ✽.I see employee is added successfuly(file:src/test/resources/features/AddEmployee.feature:24)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png");
 formatter.after({
   "status": "passed"
 });

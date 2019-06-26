@@ -33,6 +33,8 @@ public class AddEmployee extends BaseClass {
 	public WebElement password;
 	@FindBy(css="#confirmPassword")
 	public WebElement confirmPassword;
+	@FindBy(xpath="//span[@id='pim.navbar.employeeName']")
+    public WebElement empCheck;
 	
 	public AddEmployee() {
 		PageFactory.initElements(driver, this);

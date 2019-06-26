@@ -50,19 +50,12 @@ public class AddEmployeeSteps extends CommonMethods {
 		CommonMethods.sendText(addEmployee.lastName, lName);
 		CommonMethods.click(addEmployee.location);
 		CommonMethods.selectList(addEmployee.locationList, loc);
-		WebDriverWait wait = new WebDriverWait(driver, 30);
 		expectedEmpID = addEmployee.empID.getAttribute("value");
 
 	}
 
 	@When("I click on save button")
 	public void i_click_on_save_button() {
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		CommonMethods.click(addEmployee.saveEmployee);
 	}
 
@@ -138,14 +131,9 @@ public class AddEmployeeSteps extends CommonMethods {
 		int cols = excel.getColNum(0);
 		for (int i = 1; i < rows; i++) {
 			int j = 4;
-			System.out.println(excel.getCellData(i, j));
-			System.out.println(excel.getCellData(i, j+1));
-			System.out.println(excel.getCellData(i, j+2));
-			
-			
 			addEmployee.username.clear();
 			addEmployee.password.clear();
-			
+			waitForElementBeVisible(addEmployee.username, 30);
 			CommonMethods.sendText(addEmployee.username, excel.getCellData(i, j));
 			CommonMethods.sendText(addEmployee.password, excel.getCellData(i, j + 1));
 			CommonMethods.sendText(addEmployee.confirmPassword, excel.getCellData(i, j + 2));

@@ -22,7 +22,7 @@ Feature: Add Employee
     And I provide all mandatory fields
     And I click on save button
     Then I see employee is added successfuly
- 
+
   Scenario: Add Employee Labels Verification
     Then I see following label
       | First Names          |
