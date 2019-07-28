@@ -1,15 +1,18 @@
 package com.Orangehrm.steps;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
 import com.Orangehrm.pages.AddLocation;
 import com.Orangehrm.pages.HomePage;
-import com.Orangehrm.utils.BaseClass;
 import com.Orangehrm.utils.CommonMethods;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.cucumber.datatable.DataTable;
 
 public class AddLocationSteps extends CommonMethods {
 	HomePage home = new HomePage();
@@ -68,5 +71,17 @@ public class AddLocationSteps extends CommonMethods {
 
 		Assert.assertTrue(locAdded);
 	}
-
+	@Then("I seeThen I see following location labels")
+	public void i_seeThen_I_see_following_location_labels(DataTable dataTable) {
+		List<String> labels = dataTable.asList();
+		List<WebElement> labelList = location.locLabels;
+		List<String> actualLabels = new ArrayList<>();
+		for (WebElement label : labelList) {
+			String labelText = label.getText();
+			if (!labelText.isEmpty()) {
+				actualLabels.add(labelText.replace("*", ""));
+			}
+		}
+		Assert.assertTrue(actualLabels.equals(labels));	
+	}
 }

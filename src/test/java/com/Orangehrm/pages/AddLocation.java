@@ -1,5 +1,7 @@
 package com.Orangehrm.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -19,6 +21,8 @@ public class AddLocation extends BaseClass{
 	public WebElement zip;
 	@FindBy(xpath="//a[text()='Save']")
 	public WebElement saveLocationBtn;
+	@FindBy(xpath="//div/label")
+	public List<WebElement> locLabels;
 	
 	public AddLocation() {
 		PageFactory.initElements(driver, this);

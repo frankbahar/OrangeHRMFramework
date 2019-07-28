@@ -15,7 +15,6 @@ Feature: Add Employee
       | firstname | middlename | lastname | location |
       | Hakan     | H          | Sukur    | NYC      |
 
-  @temp
   Scenario: Add Employee and Create Login Details
     And I provide employee details from "EmployeeDetails"
     And I click Create Login Details

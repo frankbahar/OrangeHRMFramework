@@ -5,7 +5,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory; 
 import com.Orangehrm.utils.BaseClass;
 import com.Orangehrm.utils.CommonMethods;
-import com.Orangehrm.utils.ConfigsReader;
 
 public class LoginPage extends BaseClass{
 	//locating WebElements using @FindBy annotation

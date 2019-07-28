@@ -5,7 +5,7 @@ Feature: Login to Orange HRM website
   Background: 
     Given I see OrangeHrm logo
 
-  @smoke @login
+  @login
   Scenario: with valid credentials I should be able to login
     When I enter valid username and password
     And I click login button

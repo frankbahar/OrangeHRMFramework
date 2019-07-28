@@ -1,8 +1,13 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/AddEmployee.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Login.feature");
 formatter.feature({
-  "name": "Add Employee",
+  "name": "Login to Orange HRM website",
   "description": "",
-  "keyword": "Feature"
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@sprint3"
+    }
+  ]
 });
 formatter.background({
   "name": "",
@@ -13,91 +18,54 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "I logged in into OrangeHrm",
+  "name": "I see OrangeHrm logo",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "AddEmployeeSteps.i_logged_in_into_OrangeHrm()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I click on PIM link",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "AddEmployeeSteps.i_click_on_PIM_link()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I click on Add Employee details",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "AddEmployeeSteps.i_click_on_Add_Employee_details()"
+  "location": "LoginSteps.i_see_OrangeHrm_logo()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Add Employee and Create Login Details",
+  "name": "with invalid credentials I should not be able to login",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@temp"
+      "name": "@sprint3"
+    },
+    {
+      "name": "@regression"
     }
   ]
 });
 formatter.step({
-  "name": "I provide employee details from \"EmployeeDetails\"",
-  "keyword": "And "
+  "name": "I enter invalid username and password",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "AddEmployeeSteps.i_provide_employee_details(String)"
+  "location": "LoginSteps.i_enter_invalid_username_and_password()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I click Create Login Details",
+  "name": "I click login button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "AddEmployeeSteps.i_click_Create_Login_Details()"
+  "location": "LoginSteps.i_click_login_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I provide all mandatory fields",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "AddEmployeeSteps.i_provide_all_mandatory_fields()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I click on save button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "AddEmployeeSteps.i_click_on_save_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I see employee is added successfuly",
+  "name": "I see error messages is displayed",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "AddEmployeeSteps.i_see_employee_is_added_successfuly()"
+  "location": "LoginSteps.i_see_error_messages_is_displayed()"
 });
 formatter.result({
   "status": "passed"

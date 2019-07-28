@@ -11,9 +11,10 @@ import com.Orangehrm.pages.AddEmployee;
 import com.Orangehrm.pages.HomePage;
 import com.Orangehrm.pages.LoginPage;
 import com.Orangehrm.utils.CommonMethods;
-import com.Orangehrm.utils.ConfigsReader;
 import com.Orangehrm.utils.Constants;
 import com.Orangehrm.utils.ExcelUtility;
+import com.Orangehrm.utils.ConfigsReader;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
